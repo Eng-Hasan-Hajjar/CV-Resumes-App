@@ -31,8 +31,7 @@
             <th>
               <button
                 class="btn btn-primary"
-                @click="toggleShowInputAttributeLine()"
-              >
+                @click="toggleShowInputAttributeLine()">
                 <div v-if="showInputAttributeLine">
                   <i class="fas fa-check"></i>
                 </div>
@@ -50,12 +49,7 @@
               v-for="(attribute, attrIndex) in attribute_lines"
               v-bind:key="attrIndex"
             >
-              <input
-                type="text"
-                v-model="
-                  record.custom_field_record_attribute_line_values[attrIndex]
-                "
-              />
+              <input type="text" v-model="record.custom_field_record_attribute_line_values[attrIndex]"/>
             </td>
           </tr>
           <tr>
@@ -70,8 +64,7 @@
       <button
         type="button"
         class="btn btn-primary col-6 offset-6 mt-3"
-        @click="submit"
-      >
+        @click="submit">
         Next section
       </button>
     </div>

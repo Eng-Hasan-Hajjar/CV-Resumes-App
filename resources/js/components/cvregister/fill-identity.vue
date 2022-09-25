@@ -146,15 +146,12 @@
           class="form-check-input"
           id="is_protected"
         />
-        <label class="form-check-label" for="is_protected"
-          >Protect this CV</label
-        >
+        <label class="form-check-label" for="is_protected">Protect this CV</label>
       </div>
       <button
         type="button"
         class="btn btn-primary col-6 offset-6"
-        @click="submit"
-      >
+        @click="submit">
         Next section
       </button>
     </div>
