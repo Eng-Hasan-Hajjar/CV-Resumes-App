@@ -234,6 +234,7 @@
       </div>
     </div>
 
+
     <!-- Start card image -->
     <div class="col-md-4">
       <div class="card card-outline card-secondary">
@@ -245,6 +246,7 @@
             <div
               class="col-8 offset-2 text-center custom-col-image-wrapper custom-wrapper-1x1 p-0"
             >
+
               <template v-if="cv.photo">
                 <img
                   id="profile-image"
@@ -394,10 +396,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <!-- <span class="font-weight-normal">{{
-                      attributeLine.nama
-                    }}</span>
-                    <h5>{{ attributeLine.id }}</h5> -->
+
                   </div>
                 </template>
               </template>
@@ -596,6 +595,7 @@ export default {
         }
       });
     },
+
     deleteCategory(id) {
       let formData = new FormData();
       formData.append("_method", "DELETE");
@@ -650,6 +650,7 @@ export default {
         this.isEdit = true;
       }
     },
+
     toggleEditAttributeLine() {
       if (this.isEditAttributeLine) {
         $("#attribute-line-data").show("slow");
@@ -673,6 +674,7 @@ export default {
       }
     },
   },
+  
   mounted() {
     this.loadData();
     console.log("Component mounted.");
