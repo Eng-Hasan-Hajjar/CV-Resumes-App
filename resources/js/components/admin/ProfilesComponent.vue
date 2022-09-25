@@ -6,6 +6,7 @@
                     <h1 class="card-title">Profiles</h1>
                     <a href="" class="btn btn-sm btn-success float-right" data-toggle="modal" data-target="#modal-add-new">Add New</a>
                 </div>
+                
                 <div class="card-body">
                     <table id="profiles-table" class="table table-bordered table-hover">
                         <thead>
@@ -53,6 +54,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal fade" id="modal-add-new">
             <div class="modal-dialog modal-md">
             <div class="modal-content">
@@ -149,7 +151,7 @@
                 //     "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
                 // }).buttons().container().appendTo('#profiles-table_wrapper .col-md-6:eq(0)');
             },
-            successInit(message){                
+            successInit(message){
                     this.$toastr.success(message,'Success',{
                     timeOut: 4000,
                     progressBar: true

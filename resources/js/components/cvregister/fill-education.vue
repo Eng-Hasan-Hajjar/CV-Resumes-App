@@ -3,6 +3,7 @@
     <div class="card-header">
       <div class="card-title">Education</div>
     </div>
+    
     <div class="card-body">
       <table class="table text-center">
         <thead>

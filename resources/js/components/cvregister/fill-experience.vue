@@ -112,6 +112,7 @@ export default {
         record.custom_field_record_attribute_line_values.splice(index, 1);
       });
     },
+    
     addRecord() {
       this.records.push({
         custom_field_record_attribute_line_values: [],
