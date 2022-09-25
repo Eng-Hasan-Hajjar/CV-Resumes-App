@@ -139,7 +139,7 @@ export default {
     loadData() {
       axios.get(this.uri).then((response) => {
         let self = this;
-        $.when(this.putAsyncData(response.data.cvs));
+        $.when(self.putAsyncData(response.data.cvs));
       });
     },
     moment(date) {

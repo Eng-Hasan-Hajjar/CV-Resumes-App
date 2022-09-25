@@ -3,10 +3,7 @@
 @section('style')
 <!-- <link rel="stylesheet" href="{{ asset('/assets/adminlte/dist/css/adminlte.min.css') }}"> -->
 <style>
-      /*
- *  Draco HTML Template by @flamekaizar
- *  License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- */
+
     h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display SC", serif;
     color: #333333; }
@@ -83,7 +80,7 @@
     margin-left: 0px; }
     .cfield .cfield-list li {
         margin-bottom: 30px;
-        }    
+        }
 
     .quote {
         padding: 20px 0px;
@@ -114,7 +111,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> 
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 @endsection
 @section('content')
 <cv-template-second><cv-template-second>
