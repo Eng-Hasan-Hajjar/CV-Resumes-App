@@ -5,8 +5,7 @@
         v-for="profile in profiles"
         :key="profile.id"
         class="card ml-3 d-inline-block"
-        style="width: 30vw"
-      >
+        style="width: 30vw">
         <div class="card-body">
           <div class="row">
             <div
@@ -80,8 +79,7 @@
                         class="btn btn-success"
                         v-on:click="updateForm('profile_id', profile.id)"
                         data-toggle="modal"
-                        data-target="#modal-confirmation"
-                      >
+                        data-target="#modal-confirmation">
                         Select profile
                       </button>
                     </td>
@@ -154,7 +152,7 @@ export default {
     loadData() {
       axios.get(this.uri).then((response) => {
         let self = this;
-        $.when(this.putAsyncData(response.data.profiles));
+        $.when(self.putAsyncData(response.data.profiles));
       });
     },
     updateForm(input, value) {
