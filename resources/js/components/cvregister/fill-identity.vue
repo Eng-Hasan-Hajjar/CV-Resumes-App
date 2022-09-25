@@ -5,9 +5,7 @@
     </div>
     <div class="card-body">
       <div class="form-group">
-        <label for="first_name"
-          >First Name <span class="text-danger">*</span></label
-        >
+        <label for="first_name" >First Name <span class="text-danger">*</span></label>
         <input
           type="text"
           class="form-control"
@@ -17,9 +15,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="last_name"
-          >Last Name <span class="text-danger">*</span></label
-        >
+        <label for="last_name">Last Name <span class="text-danger">*</span></label>
         <input
           type="text"
           class="form-control"
@@ -29,9 +25,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="profession"
-          >Profession <span class="text-danger">*</span></label
-        >
+        <label for="profession">Profession <span class="text-danger">*</span></label>
         <input
           type="text"
           class="form-control"
@@ -44,16 +38,13 @@
         <label for="photo">Photo</label>
         <div
           v-if="use_profile_photo == 0"
-          class="form-check form-check-inline ml-3"
-        >
+          class="form-check form-check-inline ml-3">
           <input
             type="checkbox"
             @click="useProfilePhoto"
             class="form-check-input"
           />
-          <label class="form-check-label" for="exampleCheck1"
-            >Use profile image</label
-          >
+          <label class="form-check-label" for="exampleCheck1">Use profile image</label>
           <!-- <button @click="useProfilePhoto">Use profile image</button> -->
         </div>
         <div
@@ -62,8 +53,7 @@
             previewImage == null &&
             use_profile_photo == 1
           "
-          class="col-md-5 row"
-        >
+          class="col-md-5 row">
           <div class="col-md-12">
             <img
               v-bind:src="'/storage/' + profile.photo"
