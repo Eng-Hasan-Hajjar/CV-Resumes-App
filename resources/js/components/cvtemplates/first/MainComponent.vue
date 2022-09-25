@@ -3,7 +3,7 @@
 	<div id="innerDownload">
 		<button v-on:click="generateReport"> save as  pdf</button>
 	</div>
-	
+
 	<vue-html2pdf
         :show-layout="true"
         :float-layout="false"
@@ -16,7 +16,7 @@
         pdf-format="a4"
         pdf-orientation="landscape"
         pdf-content-width="100%"
- 
+
         @progress="onProgress($event)"
         @hasStartedGeneration="hasStartedGeneration()"
         @hasGenerated="hasGenerated($event)"
@@ -102,8 +102,11 @@
             }
         },
         methods: {
+            generateReport () {
+            	this.$refs.html2Pdf.generatePdf()
+        	},
             cvInit(){
-			
+
 			},
 			generateReport () {
             	this.$refs.html2Pdf.generatePdf()

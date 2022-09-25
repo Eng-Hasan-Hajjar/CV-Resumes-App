@@ -5,19 +5,6 @@
 <!-- <link rel="stylesheet" href="{{ asset('/assets/adminlte/dist/css/adminlte.min.css') }}"> -->
 
 <style scoped>
-        /*
-        ---------------------------------------------------------------------------------
-            STRIPPED DOWN RESUME TEMPLATE
-            html resume
-
-            v0.9: 5/28/09
-
-            design and code by: thingsthatarebrown.com 
-                                (matt brown)
-        ---------------------------------------------------------------------------------
-        */
-
-
         .msg { padding: 10px; background: #222; position: relative; }
         .msg h1 { color: #fff;  }
         .msg a { margin-left: 20px; background: #408814; color: white; padding: 4px 8px; text-decoration: none; }
