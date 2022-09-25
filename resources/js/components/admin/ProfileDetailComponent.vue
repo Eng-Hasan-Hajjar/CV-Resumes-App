@@ -200,8 +200,8 @@
                         </div>
                         <template v-if="dataLoaded">
                             <template v-if="profile.profile_attribute_line.length">
-                                <template v-for="attributeLine in profile.profile_attribute_line">
-                                    <div class="col-md-12" :key="attributeLine.id">
+                                <template v-for="attributeLine in profile.profile_attribute_line"  :key="attributeLine.id">
+                                    <div class="col-md-12">
                                         <span class="font-weight-normal">{{ attributeLine.name }}</span> <span class="float-right">Order {{attributeLine.order}}</span>
                                         <h5>{{ attributeLine.value }}</h5>
                                     </div>
@@ -342,7 +342,7 @@
                     }
                 }).then(response=>{
                     $('#photo-profile-input-file').val(''); // Reset data
-                    this.loadData(); 
+                    this.loadData();
                     if (response.data.error) this.failInit(response.data.status);
                     else this.successInit(response.data.status);
                 })
@@ -353,7 +353,7 @@
                 formData.append("_method", 'PATCH');
 
                 formData.append('status', 'update-profile');
-                
+
                 formData.append('first_name', this.updateProfile.first_name);
                 formData.append('last_name', this.updateProfile.last_name);
                 formData.append('profession', this.updateProfile.profession);
@@ -508,13 +508,13 @@
                     }
                 });
             },
-            successInit(message){                
+            successInit(message){
                     this.$toastr.success(message,'Success',{
                     timeOut: 4000,
                     progressBar: true
                 });
             },
-            failInit(message){                
+            failInit(message){
                     this.$toastr.error(message,'Fail',{
                     timeOut: 4000,
                     progressBar: true
