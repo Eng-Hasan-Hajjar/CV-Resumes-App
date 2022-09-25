@@ -221,19 +221,19 @@
                                     <div class="col-12 col-md-4">
                                         <div class="form-group">
                                             <label for="address">Name</label>
-                                            <input type="text" class="form-control" placeholder="Enter address" v-model="attributeLine.name"></input>
+                                            <input type="text" class="form-control" placeholder="Enter address" v-model="attributeLine.name"/>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-4">
                                         <div class="form-group">
                                             <label for="address">Value</label>
-                                            <input type="text" class="form-control" placeholder="Enter address" v-model="attributeLine.value"></input>
+                                            <input type="text" class="form-control" placeholder="Enter address" v-model="attributeLine.value" />
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-2">
                                         <div class="form-group">
                                             <label for="address">Order</label>
-                                            <input type="number" class="form-control" placeholder="Enter address" v-model="attributeLine.order"></input>
+                                            <input type="number" class="form-control" placeholder="Enter address" v-model="attributeLine.order"/>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-2">
