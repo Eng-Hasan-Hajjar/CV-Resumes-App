@@ -1,8 +1,8 @@
 <?php
-
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\CV\CVController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,9 +22,9 @@ Route::get('/', function () {
 
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
 
-    Route::get('/dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
+    Route::get('/dashboard', [App\Http\Controllers\Admin\AdminController::class,'dashboard'])->name('dashboard');
 
-    Route::get('/profiles', 'Admin\AdminController@profiles')->name('profile');
+    Route::get('/profiles', [App\Http\Controllers\Admin\AdminController::class,'profiles'])->name('profile');
 
     Route::prefix("/CV")->name('cv.')->group(function () {
 

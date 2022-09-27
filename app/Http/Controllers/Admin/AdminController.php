@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+  //  protected $guard = 'admin';
     /**
      * Create a new controller instance.
      *
