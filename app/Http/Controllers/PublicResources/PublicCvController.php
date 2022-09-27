@@ -61,8 +61,8 @@ class PublicCvController extends Controller
     public function show(String $id)
     {
         $data = CV::where('id', $id)->orWhere('uuid', $id)->with([
-            'customFieldCategories', 
-            'customFieldCategories.customFieldAttributeLines', 
+            'customFieldCategories',
+            'customFieldCategories.customFieldAttributeLines',
             'customFieldCategories.customFieldRecords',
             'customFieldCategories.customFieldRecords.customFieldRecordAttributeLineValues'])
             ->firstOr(function() {
@@ -81,7 +81,7 @@ class PublicCvController extends Controller
         return response()->json([
             'cv'=>$data
         ]);
-        
+
     }
 
     /**
