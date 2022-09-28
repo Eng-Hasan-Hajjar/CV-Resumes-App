@@ -45,10 +45,10 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
             Route::get("/{id}/extra", [App\Http\Controllers\Admin\ManageCVController,'fillExtra'])->name("extra");
         });
 
-        Route::get("/{id}", "App\Http\Controllers\Admin\ManageCVController@detail")->name("detail");
+        Route::get("/{id}", [App\Http\Controllers\Admin\ManageCVController,'detail'])->name("detail");
     });
 
-    Route::get('/profile/{id_profile}', 'App\Http\Controllers\Admin\AdminController@profileDetail')->name('profile-detail');
+    Route::get('/profile/{id_profile}', [App\Http\Controllers\Admin\AdminController,'profileDetail'])->name('profile-detail');
 
 
     Route::prefix('resource')->name('resource.')->group(function () {
