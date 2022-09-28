@@ -58,9 +58,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
             'custom-field' => CustomFieldController::class
         ]);
 
-        Route::patch('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController,'updateProfileAttributeLine']);
-        Route::post('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController,'addProfileAttributeLine']);
-        Route::delete('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController,'deleteProfileAttributeLine']);
+        Route::patch('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController::class,'updateProfileAttributeLine']);
+        Route::post('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController::class,'addProfileAttributeLine']);
+        Route::delete('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController::class,'deleteProfileAttributeLine']);
     });
 });
 
