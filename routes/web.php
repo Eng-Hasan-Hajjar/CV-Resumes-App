@@ -38,17 +38,17 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
 
             Route::get("/{id}/experience", [App\Http\Controllers\Admin\ManageCVController::class,'fillExperience'])->name("experiece");
 
-            Route::get("/{id}/education", [App\Http\Controllers\Admin\ManageCVController,'fillEducation'])->name("education");
+            Route::get("/{id}/education", [App\Http\Controllers\Admin\ManageCVController::class,'fillEducation'])->name("education");
 
-            Route::get("/{id}/skill", [App\Http\Controllers\Admin\ManageCVController,'fillSkill'])->name("skill");
+            Route::get("/{id}/skill", [App\Http\Controllers\Admin\ManageCVController::class,'fillSkill'])->name("skill");
 
-            Route::get("/{id}/extra", [App\Http\Controllers\Admin\ManageCVController,'fillExtra'])->name("extra");
+            Route::get("/{id}/extra", [App\Http\Controllers\Admin\ManageCVController::class,'fillExtra'])->name("extra");
         });
 
-        Route::get("/{id}", [App\Http\Controllers\Admin\ManageCVController,'detail'])->name("detail");
+        Route::get("/{id}", [App\Http\Controllers\Admin\ManageCVController::class,'detail'])->name("detail");
     });
 
-    Route::get('/profile/{id_profile}', [App\Http\Controllers\Admin\AdminController,'profileDetail'])->name('profile-detail');
+    Route::get('/profile/{id_profile}', [App\Http\Controllers\Admin\AdminController::class,'profileDetail'])->name('profile-detail');
 
 
     Route::prefix('resource')->name('resource.')->group(function () {
