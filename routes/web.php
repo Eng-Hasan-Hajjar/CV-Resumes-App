@@ -36,13 +36,13 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
 
             Route::get("/identity", [App\Http\Controllers\Admin\ManageCVController,'fillIdentity'])->name("identity");
 
-            Route::get("/{id}/experience", 'App\Http\Controllers\Admin\ManageCVController@fillExperience')->name("experiece");
+            Route::get("/{id}/experience", [App\Http\Controllers\Admin\ManageCVController,'fillExperience'])->name("experiece");
 
-            Route::get("/{id}/education", 'App\Http\Controllers\Admin\ManageCVController@fillEducation')->name("education");
+            Route::get("/{id}/education", [App\Http\Controllers\Admin\ManageCVController,'fillEducation'])->name("education");
 
-            Route::get("/{id}/skill", 'App\Http\Controllers\Admin\ManageCVController@fillSkill')->name("skill");
+            Route::get("/{id}/skill", [App\Http\Controllers\Admin\ManageCVController,'fillSkill'])->name("skill");
 
-            Route::get("/{id}/extra", 'App\Http\Controllers\Admin\ManageCVController@fillExtra')->name("extra");
+            Route::get("/{id}/extra", [App\Http\Controllers\Admin\ManageCVController,'fillExtra'])->name("extra");
         });
 
         Route::get("/{id}", "App\Http\Controllers\Admin\ManageCVController@detail")->name("detail");
