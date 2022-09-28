@@ -73,9 +73,9 @@ Route::prefix('public-resource')->name('PublicResources.')->group(function () {
 
 Route::prefix('CV')->name('CV.')->group(function () {
 
-    Route::get('/first/{idcv}', 'App\Http\Controllers\CV\CVController@templates_first')->name('templates_first');
+    Route::get('/first/{idcv}', [App\Http\Controllers\CV\CVController,'templates_first'])->name('templates_first');
 
-    Route::get('/second/{idcv}', 'App\Http\Controllers\CV\CVController@templates_second')->name('templates_second');
+    Route::get('/second/{idcv}', [App\Http\Controllers\CV\CVController,'templates_second'])->name('templates_second');
 
     // Route::get('/profiles', 'Admin\AdminController@profiles')->name('profile');
 
