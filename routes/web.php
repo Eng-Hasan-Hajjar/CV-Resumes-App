@@ -32,11 +32,11 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
 
         Route::prefix("/new")->name('create.')->group(function () {
 
-            Route::get('', [App\Http\Controllers\Admin\ManageCVController,'create'])->name("init");
+            Route::get('', [App\Http\Controllers\Admin\ManageCVController::class,'create'])->name("init");
 
-            Route::get("/identity", [App\Http\Controllers\Admin\ManageCVController,'fillIdentity'])->name("identity");
+            Route::get("/identity", [App\Http\Controllers\Admin\ManageCVController::class,'fillIdentity'])->name("identity");
 
-            Route::get("/{id}/experience", [App\Http\Controllers\Admin\ManageCVController,'fillExperience'])->name("experiece");
+            Route::get("/{id}/experience", [App\Http\Controllers\Admin\ManageCVController::class,'fillExperience'])->name("experiece");
 
             Route::get("/{id}/education", [App\Http\Controllers\Admin\ManageCVController,'fillEducation'])->name("education");
 
