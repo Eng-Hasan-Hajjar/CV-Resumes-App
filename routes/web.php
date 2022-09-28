@@ -32,23 +32,23 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
 
         Route::prefix("/new")->name('create.')->group(function () {
 
-            Route::get('', [App\Http\Controllers\Admin\ManageCVController,'create'])->name("init");
+            Route::get('', [App\Http\Controllers\Admin\ManageCVController::class,'create'])->name("init");
 
-            Route::get("/identity", [App\Http\Controllers\Admin\ManageCVController,'fillIdentity'])->name("identity");
+            Route::get("/identity", [App\Http\Controllers\Admin\ManageCVController::class,'fillIdentity'])->name("identity");
 
-            Route::get("/{id}/experience", 'App\Http\Controllers\Admin\ManageCVController@fillExperience')->name("experiece");
+            Route::get("/{id}/experience", [App\Http\Controllers\Admin\ManageCVController::class,'fillExperience'])->name("experiece");
 
-            Route::get("/{id}/education", 'App\Http\Controllers\Admin\ManageCVController@fillEducation')->name("education");
+            Route::get("/{id}/education", [App\Http\Controllers\Admin\ManageCVController::class,'fillEducation'])->name("education");
 
-            Route::get("/{id}/skill", 'App\Http\Controllers\Admin\ManageCVController@fillSkill')->name("skill");
+            Route::get("/{id}/skill", [App\Http\Controllers\Admin\ManageCVController::class,'fillSkill'])->name("skill");
 
-            Route::get("/{id}/extra", 'App\Http\Controllers\Admin\ManageCVController@fillExtra')->name("extra");
+            Route::get("/{id}/extra", [App\Http\Controllers\Admin\ManageCVController::class,'fillExtra'])->name("extra");
         });
 
-        Route::get("/{id}", "App\Http\Controllers\Admin\ManageCVController@detail")->name("detail");
+        Route::get("/{id}", [App\Http\Controllers\Admin\ManageCVController::class,'detail'])->name("detail");
     });
 
-    Route::get('/profile/{id_profile}', 'App\Http\Controllers\Admin\AdminController@profileDetail')->name('profile-detail');
+    Route::get('/profile/{id_profile}', [App\Http\Controllers\Admin\AdminController::class,'profileDetail'])->name('profile-detail');
 
 
     Route::prefix('resource')->name('resource.')->group(function () {
@@ -58,9 +58,9 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
             'custom-field' => CustomFieldController::class
         ]);
 
-        Route::patch('profiles/{id_profile}/profile-attribute-line', 'App\Http\Controllers\ProfileController@updateProfileAttributeLine');
-        Route::post('profiles/{id_profile}/profile-attribute-line', 'App\Http\Controllers\ProfileController@addProfileAttributeLine');
-        Route::delete('profiles/{id_profile}/profile-attribute-line', 'App\Http\Controllers\ProfileController@deleteProfileAttributeLine');
+        Route::patch('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController,'updateProfileAttributeLine']);
+        Route::post('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController,'addProfileAttributeLine']);
+        Route::delete('profiles/{id_profile}/profile-attribute-line', [App\Http\Controllers\ProfileController,'deleteProfileAttributeLine']);
     });
 });
 
@@ -73,9 +73,9 @@ Route::prefix('public-resource')->name('PublicResources.')->group(function () {
 
 Route::prefix('CV')->name('CV.')->group(function () {
 
-    Route::get('/first/{idcv}', 'App\Http\Controllers\CV\CVController@templates_first')->name('templates_first');
+    Route::get('/first/{idcv}', [App\Http\Controllers\CV\CVController,'templates_first'])->name('templates_first');
 
-    Route::get('/second/{idcv}', 'App\Http\Controllers\CV\CVController@templates_second')->name('templates_second');
+    Route::get('/second/{idcv}', [App\Http\Controllers\CV\CVController,'templates_second'])->name('templates_second');
 
     // Route::get('/profiles', 'Admin\AdminController@profiles')->name('profile');
 
